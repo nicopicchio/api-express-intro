@@ -65,9 +65,17 @@ app.listen(port, () => {
 
 ```
 
-7. Finally, start up our server!
+7. Update your `package.json` file and replace the `"scripts"` section with the following:
+
+```json
+"scripts": {
+   "start" : "nodemon index.js"
+},
 ```
-npx nodemon index.js
+
+8. Finally, start up our server!
+```
+npm start
 ``` 
 
 Our servers is now running and *listening* for HTTP requests.

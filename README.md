@@ -139,5 +139,7 @@ Implement the following express routes in your application:
 * A GET `/greeting/afternoon` route that returns `{greeting: 'good afternoon'}`
 * A DELETE `/greeting/` route that returns `{greeting: 'good bye'}`
 
+Every time a `/greeting` route is called, increment a counter. Add a new route, GET `/count` that returns the value of the counter.
+
 ## Extension
 Use express route parameters to implement a single /greeting route that handles all the GET requests above.

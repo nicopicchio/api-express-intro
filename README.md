@@ -112,7 +112,7 @@ app.get("/", (req, res) => {
 1. Set up and install express using the steps above.
 2. Implement the Hello! API endpoint from above.
 3. Make a request to the endpoint using `curl`, your browser, a `fetch` request from the Developer Console, and an API testing tool such as Insomnia or Postman.
-4. Look at the express documentation for the [request](https://expressjs.com/en/4x/api.html#req) object. Update the handler to log out the following information from the request object: baseUrl, ip, protocol, method.
+4. Look at the express documentation for the [request](https://expressjs.com/en/4x/api.html#req) object. Update the handler to log out the following information from the request object: baseUrl, ip, protocol, method. What other information might be useful from the request object in a real API?
 
 ## Adding Routes
 We can add as many routes as we like with express. To add another route that returns `{ msg: 'Goodbye'}`:
@@ -138,3 +138,6 @@ Implement the following express routes in your application:
 * A GET `/greeting/morning` route that returns `{greeting: 'good morning'}`
 * A GET `/greeting/afternoon` route that returns `{greeting: 'good afternoon'}`
 * A DELETE `/greeting/` route that returns `{greeting: 'good bye'}`
+
+## Extension
+Use express route parameters to implement a single /greeting route that handles all the GET requests above.

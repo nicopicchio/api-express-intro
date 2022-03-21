@@ -22,6 +22,8 @@ app.listen(port, () => {
 	console.log(`Server is running on http://localhost:${port}/`);
 });
 
+let counter = 0;
+
 // app.get("/", (req, res) => {
 //   console.log("got request!")
 //   res.send("Hello!")
@@ -38,17 +40,24 @@ app.get('/bye', (req, res) => {
 });
 
 app.get('/greeting', (req, res) => {
+	counter++;
 	res.json({ greeting: 'good day' });
 });
 
 app.get('/greeting/morning', (req, res) => {
+	counter++;
 	res.json({ greeting: 'good morning' });
 });
 
 app.get('/greeting/afternoon', (req, res) => {
+	counter++;
 	res.json({ greeting: 'good afternoon' });
 });
 
 app.delete('/greeting', (req, res) => {
   res.json({greeting: 'good bye'})
+})
+
+app.get('/count', (req, res) => {
+	res.json({count: counter})
 })
